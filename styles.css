@@ -366,7 +366,13 @@ html {
   color: var(--main-font-color);
 }
 
-.hero .content .hello {
+.hello {
+  font-size: 80px;
+  padding-bottom: 5px;
+  width: 400px;
+}
+
+.hero .content {
   font-size: 28px;
   padding-bottom: 5px;
 }
