@@ -1,0 +1,1543 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8;" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="supported-color-scheme" content="light dark" />
+
+    <title>Eight Bit NFTs</title>
+
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+      body {
+        margin: 0;
+        background-color: #cccccc;
+      }
+
+      table {
+        border-spacing: 0;
+      }
+
+      td {
+        padding: 0;
+      }
+
+      img {
+        border: 0;
+      }
+
+      .wrapper {
+        width: 100%;
+        table-layout: fixed;
+        background-color: #cccccc;
+        padding-bottom: 40px;
+        padding-top: 30px;
+      }
+
+      .main {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 600px;
+        background-color: #ffffff;
+        border-spacing: 0;
+        font-family: 'Lato';
+        color: #4a4a4a;
+      }
+  
+
+      .button {
+        background-color: #2081E2;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+      }
+
+    
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      a:hover {
+        color: #509fee;
+      }
+
+
+      @media screen and (max-width: 599.98px) {
+        .social-icons-header {
+          width: 30px !important;
+          height: 30px !important;
+        }
+
+        .responsive-header-width {
+          width: 85% !important;
+        }
+
+        .hero-heading {
+          font-size:  43px !important;
+        }
+
+        .hero-text {
+          font-size: 17px !important;
+        }
+
+        .article-heading {
+          font-size: 16px !important;
+        }
+
+        .article-heading-icon {
+          width: 25px !important;
+          height: 25px !important;
+        }
+
+        .nft-name {
+          font-size: 17px !important;
+        }
+
+        .article-text {
+          font-size: 18px !important;
+          line-height: 1.7 !important;
+        }
+
+        .two-columns {
+          align-items: center !important;
+          text-align: center !important;
+          width: 50% !important;
+          padding-bottom: 10px !important;
+          padding-top: 10px !important;
+        
+      
+        }
+
+        .category-heading {
+          font-size: 13px !important;
+        }
+
+        .category-value {
+          font-size:  24px !important;
+        }
+
+        .none {
+          display: none !important;
+        }
+
+        .whitespace-width {
+          padding-bottom: 24px !important;
+        }
+
+        .full-width {
+          margin-bottom: 35px !important;
+          width: 460px !important;
+          min-width: 100% !important;
+          max-width: 100% !important;
+       
+        }
+
+        .full-width-footer {
+          margin-top: 7px !important;
+          margin-bottom: 7px !important;
+          width: 460px !important;
+          min-width: 100% !important;
+          max-width: 100% !important;
+          font-size:  12px !important;
+        }
+
+        .footer-heading {
+          font-size: 16px !important;            
+        }
+
+        .full-block {
+        display: block !important;
+        text-align: center !important; 
+        align-items: center !important;
+        }
+
+        .center-align {
+          padding: 0px !important;
+          text-align: center !important;
+          align-items: center !important;
+          margin-bottom: 2px !important;
+          margin-top: 3px !important;
+          line-height: 1.8 !important;
+          
+        }
+
+        .nft-info-padding {
+          padding-left: 20px !important;
+        }
+
+        .image-height {
+          height: 100% !important;
+        }
+
+        .top-collections-image {
+          width: 198px!important;
+          height: 158px !important;
+          align-items: center !important;
+        }
+
+        .top-collections-info {
+          align-items: left !important;
+          margin-left: 1px !important;
+          width: 150px !important;
+          padding-left: 1px !important;
+          text-align: left !important;
+          line-height: 1.8 !important;
+        }
+        
+        .top-collections-text {
+          font-size: 12px !important;
+        }
+      }
+
+
+
+      @media screen and (max-width: 399.98px) {
+        .responsive-header-width {
+          width: 90% !important;
+        }
+
+        .hero-heading {
+          font-size:  40px !important;
+        }
+
+        .hero-text {
+          font-size: 16px !important;
+        }
+
+        .article-heading {
+          font-size: 18px !important;
+        }
+
+        .article-heading-icon {
+          width: 20px !important;
+          height: 20px !important;
+        }
+
+        .article-text {
+          font-size: 19px !important;
+          line-height: 1.9 !important;
+        }
+        
+        .nft-name {
+          font-size: 17px !important;
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+      }
+    </style>
+  </head>
+
+  <body>
+    <center class="wrapper" style="table-layout: fixed; padding-bottom: 40px; padding-top: 20px; padding-left: 10px; padding-right: 10px;">
+      <table class="main" align="center" align="center" border="0" cellpadding="0" cellspacing="0" width="600px" border-spacing="0"
+      style="
+          color: #797979;
+          font-family: 'Playfair Display', serif;
+          background-color: #ffffff;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          max-width: 600px;
+        ">
+
+<!-- START OF SOCIAL MEDIA HEADER-->
+<tr>
+  <td align="center" style="background-color: #2081E2; " width="100%">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="80%" class="responsive-header-width">
+      <tbody>
+        <tr>
+          <td align="center" >
+            <p style="text-decoration: none;">
+              <a href="#">
+              <img class="social-icons-header" src="https://i.ibb.co/YDKwd3t/icons8-home-32.png" alt="icons8-home-32" border="0" width="40" height="40" style="color: white;"> 
+              </a>
+            </p>
+          </td>
+          <td align="center" >
+            <p style="text-decoration: none; ">
+              <a href="">
+              <img class="social-icons-header" src="https://i.ibb.co/QdHmb1Q/icons8-mario-8-bit-50.png" alt="icons8-mario-8-bit-50" border="0" width="40" height="40" style="color: white;"/>
+            </a>
+          </p>
+          </td>
+          <td align="center" >
+            <p style="text-decoration: none;">
+              <a href="">
+              <img class="social-icons-header" src="https://i.ibb.co/mbQZcL3/icons8-pixel-star-64.png" alt="icons8-pixel-star-64" border="0" width="40" height="40" style="color: white;"/>
+            </a>
+          </p>
+          </td>
+          <td align="center" >
+            <p style="text-decoration: none; ">
+              <a href="">
+              <img class="social-icons-header" src="https://i.ibb.co/kQvzx5B/icons8-minecraft-axe-30.png" alt="icons8-minecraft-axe-30" border="0" width="40" height="40" style="color: white;"/>
+            </a</p>
+          </td>
+          <td align="center" >
+            <p style="text-decoration: none;">
+              <a href="">
+                <img class="social-icons-header" src="https://i.ibb.co/jDLc9Tx/icons8-pixel-heart-50-2.png" alt="icons8-pixel-heart-50-2" border="0" width="40" height="40" style="color: white;"/>
+              </a>
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+
+<!-- END OF SOCIAL MEDIA HEADER-->
+
+<!---- WHITE SPACE -->
+<tr>
+  <td>
+    <table>
+      <tbody>
+        <tr>
+          <td width="80px" height="10px">&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- WHITE SPACE -->
+
+
+
+
+<!-- START OF LOGO 8 BIT -->
+<tr>
+  <td align="center">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+      <tbody>
+        <tr>
+          <td align="center" width="80%" style="background-color: white;">
+            <p class="hero-heading" style="padding: 10px 0 10px 0; margin-bottom: 10px; font-size: 50px; font-weight: bold; text-align: center; align-items: center; font-family: 'Press Start 2P', serif; color: #302f2f;">8 Bits
+            </p>
+            <p class="hero-text" style="font-family: 'Press Start 2P', serif; color: #302f2f; padding: 10px 0 10px 0; margin-bottom: 10px; font-size: 15px; font-weight: bold; text-align: center; align-items: center;">The SuperNES Inspired</p>
+            <p class="hero-text" style="font-family: 'Press Start 2P', serif; color: #302f2f; padding: 10px 0 10px 0; margin-bottom: 10px; font-size: 15px; font-weight: bold; text-align: center; align-items: center;">8-Bit Pixel NFTs</p>
+            <p  class="hero-text" style="font-family: 'Press Start 2P', serif; color: #302f2f; padding: 10px 0 10px 0; margin-bottom: 10px; font-size: 15px; font-weight: bold; text-align: center; align-items: center;">Need we say more?</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- END OF LOGO 8 BIT -->
+
+
+
+<!---- WHITE SPACE -->
+<tr>
+  <td>
+    <table>
+      <tbody>
+        <tr>
+          <td width="80px" height="40px">&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- WHITE SPACE -->
+
+
+<!-- START WEEKLY FEATURED NFT HEADING -->
+<tr>
+  <td style="padding-left: 73px; padding-bottom: 8px;">
+    <table>
+      <tbody>
+        <tr>
+          <td align="left">
+            <p class="article-heading" style="padding: 10px 0 10px 0; margin-bottom: 10px; font-size: 15px; font-weight: bold; text-align: center; align-items: center; font-family: 'Press Start 2P', serif; color: #302f2f; ">WEEKLY FEATURED NFT </p>
+
+          </td>
+          <td width="10px"></td>
+          <td>
+            <img class="article-heading-icon" src="https://i.ibb.co/8YmLNhN/icons8-pixel-arrow-50.png" alt="icons8-pixel-arrow-50" width="23px" height="22px" style="transform: rotate(-45deg) ; align-items: center; vertical-align: center;" border="0">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- END  WEEKLY FEATURED NFT HEADING -->
+
+
+
+<!-- START OF FEATURED NFT -->
+<tr>
+  <td align="center" >
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="80%">
+      <tbody>
+        <tr>
+
+          <!-- start of featured card -->
+          <td class=""  style="align-items: center; text-align: center; ">
+            <table style="margin: 0 auto; align-items: center; text-align: center;">
+              <tbody>
+                <tr>
+                  <td class="padding" width="100%" >
+                    <a href="#">
+                      <img src="https://i.ibb.co/WyHHd4W/featured-1.jpg" alt="featured-1" border="0" width="100%" height="315px" style="border-top-left-radius: 10px;border-top-right-radius: 10px; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;"/>
+                    </a>
+                    <table align="center" >
+                      <tbody>
+                        <tr>      
+                          <td align="left" style="padding: 15px; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; border-bottom-left-radius: 16px;border-bottom-right-radius: 16px;">
+                            <table class="center">
+                              <tbody>
+                                <tr>
+                                  <td >
+                                    <table >
+                                      <tbody>
+                                        <tr>
+                                          <td>
+                                            <p class="nft-name " style="font-size: 16px; font-family: 'Press Start 2P'; align-items: left; color: black; margin-bottom: 10px; overflow: hidden">Bedroom #100
+                                            </p>
+                                          </td>
+                                          <td width="8px"></td>
+                                          <td>
+                                            <img class="article-heading-icon" src="https://i.ibb.co/vhLr7x7/verified-icon.png" alt="verified-icon" border="0" width="20" height="20" style="align-items: center; vertical-align: center; margin-top: 3px;">
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        
+                            <p class="article-text" style="word-wrap: break-word; font-family: 'Poppins'; align-items: left; font-size: 17px; color: rgb(63, 63, 63); letter-spacing: 0.5px; list-style: none; line-height: 1.6; padding-bottom: 5px;"> The fully-generative collection of 6765 NFTs, that are based on SuperNES inspired rooms. To achieve this, our algorithmic program will use the buyer’s personal on-chain wallet data and cosmology information to create a data-driven Isometric 3D art experience that will come to life on the Ethereum blockchain.</p>
+                            
+                            <!-- Details Row 1 -->
+                            <table align="center" width="100%" style="align-items: center;">
+                              <tbody>
+                                <tr>
+
+                                  <td class="two-columns"  align="center" width="90px" height ="80px" style="margin-bottom: 5px; text-align: left;">
+                                    <p class="category-heading"  style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 12px; ">Floor</p>
+                                    <p class="category-value"  style="font-family: 'Roboto'; align-items: left; font-size: 20px; font-weight: bold; color: black;">1.3 ETH</p>
+                                  </td>
+
+                                  <td class="none" width="10px"></td>
+
+                                  <td class="two-columns"  align="center" width="90px" height ="80px" style="margin-bottom: 5px; text-align: left;">
+                                    <p class="category-heading"  style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 12px; ">Volume</p>
+                                    <p class="category-value"  style="font-family: 'Roboto'; align-items: left; font-size: 20px; font-weight: bold; color: black;">13 ETH</p>
+                                  </td>
+
+                                  <td width="10px"></td>
+
+                                  <td class="two-columns none"  align="center" width="90px" height ="80px" style="margin-bottom: 5px; text-align: left;">
+                                    <p class="category-heading"  style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 12px; ">Best Offer</p>
+                                    <p class="category-value"  style="font-family: 'Roboto'; align-items: left; font-size: 20px; font-weight: bold; color: black;">2.33 ETH</p>
+                                </td>
+
+                                </tr>
+                              </tbody>
+                            </table>
+                            <!-- Details Row 1 -->
+                            
+
+                            <!-- Details Row 2-->
+                            <table align="center" width="100%" style="align-items: center;">
+                              <tbody>
+                                <tr>
+
+                                  <td class="two-columns"  align="center" width="90px" height ="80px" style="margin-bottom: 5px; text-align: left;">
+                                    <p class="category-heading"  style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 12px; ">Listed</p>
+                                    <p class="category-value"  style="font-family: 'Roboto'; align-items: left; font-size: 20px; font-weight: bold; color: black;">5%</p>
+                                  </td>
+
+                                  <td class="none" width="10px"></td>
+
+                                  <td class="two-columns"  align="center" width="90px" height ="80px" style="margin-bottom: 5px; text-align: left;">
+                                    <p class="category-heading"  style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 12px; ">Owners</p>
+                                    <p class="category-value"  style="font-family: 'Roboto'; align-items: left; font-size: 20px; font-weight: bold; color: black;">29</p>
+                                  </td>
+
+                                  <td width="10px"></td>
+
+                                  <td class="two-columns none"  align="center" width="90px" height ="80px" style="margin-bottom: 5px; text-align: left;">
+                                    <p class="category-heading"  style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 12px; ">Ex-Holders</p>
+                                    <p class="category-value"  style="font-family: 'Roboto'; align-items: left; font-size: 20px; font-weight: bold; color: black;">15%</p>
+                                </td>
+
+                                </tr>
+                              </tbody>
+                            </table>
+                             <!-- Details Row 2-->
+
+
+                             <!-- Details Row 3 -->
+                             <table align="center" width="100%" style="align-items: center;">
+                              <tbody>
+                                <tr>
+
+                                  <td class="two-columns"  align="center" width="90px" height ="80px" style="margin-bottom: 5px; text-align: left;">
+                                    <p class="category-heading"  style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 12px; ">Items</p>
+                                    <p class="category-value"  style="font-family: 'Roboto'; align-items: left; font-size: 20px; font-weight: bold; color: black;">150</p>
+                                  </td>
+
+                                  <td class="none" width="10px"></td>
+
+                                  <td class="two-columns"  align="center" width="90px" height ="80px" style="margin-bottom: 5px; text-align: left;">
+                                    <p class="category-heading"  style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 12px; ">Chain</p>
+                                    <p class="category-value"  style="font-family: 'Roboto'; align-items: left; font-size: 20px; font-weight: bold; color: black;">ETH</p>
+                                  </td>
+
+                                  <td width="10px"></td>
+
+                                  <td class="two-columns none"  align="center" width="90px" height ="80px" style="margin-bottom: 5px; text-align: left;">
+                                    <p class="category-heading"  style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 12px; ">Category</p>
+                                    <p class="category-value"  style="font-family: 'Roboto'; align-items: left; font-size: 20px; font-weight: bold; color: black;">ART</p>
+                                </td>
+
+                                </tr>
+                              </tbody>
+                            </table>
+                            <!-- Details Row 3 -->
+
+
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                   <!-- end of featured card -->
+                 
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- START OF FEATURED NFT -->
+
+
+<!---- WHITE SPACE -->
+<tr>
+  <td>
+    <table>
+      <tbody>
+        <tr>
+          <td width="80px" height="50px">&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- WHITE SPACE -->
+
+
+
+<!-- START OF NOTABLE COLLECTIONS TEXT -->
+<tr>
+  <td style="padding-left: 73px; padding-bottom: 8px; ">
+    <table>
+      <tbody>
+        <tr>
+          <td align="left">
+            <p class="article-heading" style=" padding: 10px 0 10px 0; margin-bottom: 10px; font-size: 15px; font-weight: bold; text-align: center; align-items: center; font-family: 'Press Start 2P', serif; color: #302f2f; ">Notable Collections</p>
+          </td>
+          <td width="10px"></td>
+          <td>
+            <img class="article-heading-icon" src="https://i.ibb.co/8YmLNhN/icons8-pixel-arrow-50.png" alt="icons8-pixel-arrow-50" width="23px" height="22px" style="transform: rotate(-45deg) ; align-items: center; vertical-align: center;" border="0">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- END OF NOTABLE COLLECTIONS TEXT -->
+
+
+
+<!-- START OF NOTABLE COLLECTIONS -->
+<tr>
+  <td align="center"  >
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"  width="100%" style="align-items: center; text-align: center; padding-left: 55px; padding-right: 55px">
+      <tbody>
+        <tr>
+         
+            
+          <!-- Card 1 -->
+         <td class="full-width full-block" 
+            width="50%" style="align-items: center;  text-align:  center; ">
+            <table style="margin: 0 auto; ">
+                <tbody>
+                  <tr>
+                    <td class="full-width" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
+                      <a href="#">
+                        <img class="image-height" src="https://i.ibb.co/rfLb2qK/notable-collection-1.jpg" alt="notable-collection-1" border="0" width="100%" height="220px" style="border-top-right-radius: 10px; border-top-left-radius: 10px;  "/>
+                      </a>
+
+                      <table>
+                          <tbody>
+                                <tr>      
+                                  <td class="nft-info-padding" align="left" style="padding: 8px">
+                                    <p class="nft-name" style="font-family: 'Press Start 2P'; align-items: left; color: black; margin-bottom: 18px; overflow: hidden;font-size: 14px; ">Bedroom #53</p>
+                                    
+                                    <table>
+                                      <tbody>
+                                        <tr>
+                                          <td align="left">
+                                            <p class="category-heading" style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 9px;">Floor</p>
+                                            <p class="category-value" style="font-family: 'Roboto'; align-items: left; font-size: 16px; font-weight: bold; color: black;">2.5 ETH</p>
+                                          </td>
+                                          <td width="30px"></td>
+                                          <td align="left">
+                                            <p class="category-heading" style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 9px; ">Total Volume</p>
+                                            <p class="category-value" style="font-family: 'Roboto'; align-items: left; font-size: 16px; font-weight: bold; color: black;">27 ETH</p>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                </tbody>
+            </table>
+          </td>
+          <!-- end of card 1 -->
+
+          <!-- break -->
+          <td  class="none" width="15px"></td>
+          <!-- break -->
+
+          <!-- start of card 2 -->
+          <td class="full-width full-block" 
+          width="50%" style="align-items: center;  text-align:  center; ">
+          <table style="margin: 0 auto; ">
+              <tbody>
+                <tr>
+                  <td class="full-width" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
+                    <a href="#">
+                      <img class="image-height" src="https://i.ibb.co/8X1KwSC/notable-collection-2.jpg" alt="notable-collection-2" border="0" width="100%" height="220px" style="border-top-right-radius: 10px; border-top-left-radius: 10px;  "/>
+                    </a>
+
+                    <table>
+                        <tbody>
+                              <tr>      
+                                <td class="nft-info-padding" align="left" style="padding: 8px">
+                                  <p class="nft-name" style="font-family: 'Press Start 2P'; align-items: left; color: black; margin-bottom: 18px; overflow: hidden;font-size: 14px; ">Spaceship #87</p>
+                                  
+                                  <table>
+                                    <tbody>
+                                      <tr>
+                                        <td align="left">
+                                          <p class="category-heading" style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 9px;">Floor</p>
+                                          <p class="category-value" style="font-family: 'Roboto'; align-items: left; font-size: 16px; font-weight: bold; color: black;">4.5 ETH</p>
+                                        </td>
+                                        <td width="30px"></td>
+                                        <td align="left">
+                                          <p class="category-heading" style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 9px; ">Total Volume</p>
+                                          <p class="category-value" style="font-family: 'Roboto'; align-items: left; font-size: 16px; font-weight: bold; color: black;">45 ETH</p>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                      </table>
+                    </td>
+                  </tr>
+              </tbody>
+          </table>
+        </td>
+              <!-- end of card 2 -->
+                 
+          
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- END OF BROWSE CATEGORY -->
+
+
+
+<!---- WHITE SPACE -->
+<tr>
+  <td>
+    <table>
+      <tbody>
+        <tr>
+          <td  width="80px" height="50px">&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- WHITE SPACE -->
+
+
+
+
+<!-- START OF TRENDING TEXT -->
+<tr>
+  <td style="padding-left: 73px; padding-bottom: 8px; ">
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <p class="article-heading" style=" padding: 10px 0 10px 0; margin-bottom: 10px; font-size: 15px; font-weight: bold; text-align: center; align-items: center; font-family: 'Press Start 2P', serif; color: #302f2f; ">Trending NFTs</p>
+          </td>
+          <td width="10px"></td>
+          <td>
+            <img class="article-heading-icon" src="https://i.ibb.co/8YmLNhN/icons8-pixel-arrow-50.png" alt="icons8-pixel-arrow-50" width="23px" height="22px" style="transform: rotate(-45deg) ; align-items: center; vertical-align: center;" border="0">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- END OF TRENDING TEXT -->
+
+
+
+<!-- START OF TRENDING -->
+<tr>
+  <td align="center"  >
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"  width="100%" style="align-items: center; text-align: center; padding-left: 55px; padding-right: 55px">
+      <tbody>
+        <tr>
+         
+            
+          <!-- Card 1 -->
+         <td class="full-width full-block" 
+            width="50%" style="align-items: center;  text-align:  center; ">
+            <table style="margin: 0 auto; ">
+                <tbody>
+                  <tr>
+                    <td class="full-width" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
+                      <a href="#">
+                        <img class="image-height" src="https://i.ibb.co/cC0yMDN/trending-1.jpg" alt="trending-collection-1" border="0" width="100%" height="220px" style="border-top-right-radius: 10px; border-top-left-radius: 10px;  "/>
+                      </a>
+
+                      <table>
+                          <tbody>
+                                <tr>      
+                                  <td class="nft-info-padding" align="left" style="padding: 8px">
+                                    <p class="nft-name" style="font-family: 'Press Start 2P'; align-items: left; color: black; margin-bottom: 18px; overflow: hidden;font-size: 14px; ">Kuntash #321</p>
+                                    
+                                    <table>
+                                      <tbody>
+                                        <tr>
+                                          <td align="left">
+                                            <p class="category-heading" style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 9px;">Floor</p>
+                                            <p class="category-value" style="font-family: 'Roboto'; align-items: left; font-size: 16px; font-weight: bold; color: black;">12.0 ETH</p>
+                                          </td>
+                                          <td width="30px"></td>
+                                          <td align="left">
+                                            <p class="category-heading" style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 9px; ">Total Volume</p>
+                                            <p class="category-value" style="font-family: 'Roboto'; align-items: left; font-size: 16px; font-weight: bold; color: black;">249 ETH</p>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                </tbody>
+            </table>
+          </td>
+          <!-- end of card 1 -->
+
+          <!-- break -->
+          <td  class="none" width="15px"></td>
+          <!-- break -->
+
+          <!-- start of card 2 -->
+          <td class="full-width full-block" 
+          width="50%" style="align-items: center;  text-align:  center; ">
+          <table style="margin: 0 auto; ">
+              <tbody>
+                <tr>
+                  <td class="full-width" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
+                    <a href="#">
+                      <img class="image-height" src="https://i.ibb.co/8gLQ777/trending-2.jpg" alt="trending-collection-2" border="0" width="100%" height="220px" style="border-top-right-radius: 10px; border-top-left-radius: 10px;  "/>
+                    </a>
+
+                    <table>
+                        <tbody>
+                              <tr>      
+                                <td class="nft-info-padding" align="left" style="padding: 8px">
+                                  <p class="nft-name" style="font-family: 'Press Start 2P'; align-items: left; color: black; margin-bottom: 18px; overflow: hidden;font-size: 14px; ">OutaTime #1025</p>
+                                  
+                                  <table>
+                                    <tbody>
+                                      <tr>
+                                        <td align="left">
+                                          <p class="category-heading" style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 9px;">Floor</p>
+                                          <p class="category-value" style="font-family: 'Roboto'; align-items: left; font-size: 16px; font-weight: bold; color: black;">8.7 ETH</p>
+                                        </td>
+                                        <td width="30px"></td>
+                                        <td align="left">
+                                          <p class="category-heading" style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 9px; ">Total Volume</p>
+                                          <p class="category-value" style="font-family: 'Roboto'; align-items: left; font-size: 16px; font-weight: bold; color: black;">135 ETH</p>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                      </table>
+                    </td>
+                  </tr>
+              </tbody>
+          </table>
+        </td>
+              <!-- end of card 2 -->
+                 
+          
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- END OF TRENDING -->
+
+
+
+<!---- WHITE SPACE -->
+<tr>
+  <td>
+    <table>
+      <tbody>
+        <tr>
+          <td width="80px" height="60px">&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- WHITE SPACE -->
+
+
+<!-- START OF TOP COLLECTIONS TEXT -->
+<tr>
+  <td align="center" style="padding-bottom: 8px;" width="80%">
+    <table>
+      <tbody>
+        <tr>
+          <td align="center" style="margin: 0 auto;" width="440px">
+            <p class="article-heading" style=" padding: 10px 0 10px 0; font-size: 15px; font-weight: bold; text-align: center; align-items: center; font-family: 'Press Start 2P', serif; color: #302f2f; ">Top Collections
+              <span style="color:#2081E2; text-decoration: underline; text-decoration-thickness: 3px;">
+              Last Week
+              </span>
+            </p>
+            
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <img class="article-heading-icon" src="https://i.ibb.co/8YmLNhN/icons8-pixel-arrow-50.png" alt="icons8-pixel-arrow-50" width="30px" height="30px" style="transform: rotate(45deg) ; align-items: center; vertical-align: center;"  border="0">
+                    <img class="article-heading-icon" src="https://i.ibb.co/8YmLNhN/icons8-pixel-arrow-50.png" alt="icons8-pixel-arrow-50" width="30px" height="30px" style="transform: rotate(45deg) ; align-items: center; vertical-align: center;" border="0">
+                    <img class="article-heading-icon" src="https://i.ibb.co/8YmLNhN/icons8-pixel-arrow-50.png" alt="icons8-pixel-arrow-50" width="30px" height="30px" style="transform: rotate(45deg) ; align-items: center; vertical-align: center;" border="0">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+        
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- END OF OF TOP COLLECTIONS TEXT  -->
+
+
+<!---- WHITE SPACE -->
+<tr>
+  <td>
+    <table>
+      <tbody>
+        <tr>
+          <td width="80px" height="10px">&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- WHITE SPACE -->
+
+
+
+<!-- START OF TOP COLLECTIONS PAST 24 HOURS -->
+<tr>
+  <td align="center"  style="align-items: center; padding: 5px;">
+      <table style="align-items: center; " width="80%">
+        <tbody>
+          <tr>
+            <td align="center" style="align-items: center; vertical-align: center; padding-bottom: 10px" width="430px">
+              
+              <!-- featured card 1 -->
+              <table style="box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; margin-bottom: 20px; padding: 20px; border-radius: 8px" width="100%">
+                <tr>
+                  <td >
+                    <img class="top-collections-image"  width="80px" height="60px"  style="border-radius: 20%; align-items: center; vertical-align: center;" src="https://i.ibb.co/j54QZZs/top-collections-1.jpg" alt="top-collections-1" border="0" alt="">
+                  </td>
+
+                  <td class="none" width="27px"></td>
+
+                  <td >
+                    <table >
+                      <tbody>
+                        <tr>
+                            <td class="full-block top-collections-info " align="left">
+                              <p class="category-heading"  style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 12px; align-items: center; color: black; ">Wasteland #35
+                              </p>
+                              <p class="top-collections-text" style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 9px; align-items: center; ">Wastelands
+                              </p>
+                            </td>
+
+                            <td class="none" width="25px"></td>
+
+                            <td class="full-block top-collections-info"  align="left">
+                              <p class="top-collections-text" style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 11px; align-items: center; color: rgb(24, 190, 24) "> +8.6%
+                              </p>
+                              <p class="top-collections-text" style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 9px; align-items: center; color: black">6.2 ETH
+                          </td>
+
+                          </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <!-- featured card 1 -->
+
+               <!-- featured card 2 -->
+               <table style="box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; margin-bottom: 20px; padding: 20px; border-radius: 8px" width="100%">
+                <tr>
+                  <td >
+                    <img class="top-collections-image"  width="80px" height="60px"  style="border-radius: 20%; align-items: center; vertical-align: center;" src="https://i.ibb.co/87wkB9V/top-collections-2.jpg" alt="top-collections-2" border="0" alt="">
+                  </td>
+
+                  <td class="none" width="27px"></td>
+
+                  <td >
+                    <table >
+                      <tbody>
+                        <tr>
+                            <td class="full-block top-collections-info " align="left">
+                              <p class="category-heading"  style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 12px; align-items: center; color: black; ">Skulls #1933
+                              </p>
+                              <p class="top-collections-text" style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 9px; align-items: center; ">Skull Islands
+                              </p>
+                            </td>
+
+                            <td class="none" width="25px"></td>
+
+                            <td class="full-block top-collections-info"  align="left">
+                              <p class="top-collections-text" style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 11px; align-items: center; color: rgb(24, 190, 24) "> +5.0%
+                              </p>
+                              <p class="top-collections-text" style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 9px; align-items: center; color: black">5.1 ETH
+                          </td>
+
+                          </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <!-- featured card 2 -->
+
+              <!-- featured card 3 -->
+              <table style="box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; margin-bottom: 20px; padding: 20px; border-radius: 8px" width="100%">
+                <tr>
+                  <td >
+                    <img class="top-collections-image"  width="80px" height="60px"  style="border-radius: 20%; align-items: center; vertical-align: center;" src="https://i.ibb.co/cNpC1yF/top-collections-3.jpg" alt="top-collections-1" border="0" alt="">
+                  </td>
+
+                  <td class="none" width="27px"></td>
+
+                  <td >
+                    <table >
+                      <tbody>
+                        <tr>
+                            <td class="full-block top-collections-info " align="left">
+                              <p class="category-heading"  style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 12px; align-items: center; color: black; ">Inception #528
+                              </p>
+                              <p class="top-collections-text" style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 9px; align-items: center; ">Inceptions
+                              </p>
+                            </td>
+
+                            <td class="none" width="25px"></td>
+
+                            <td class="full-block top-collections-info"  align="left">
+                              <p class="top-collections-text" style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 11px; align-items: center; color: rgb(24, 190, 24) "> +3.2%
+                              </p>
+                              <p class="top-collections-text" style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 9px; align-items: center; color: black">3.2 ETH
+                          </td>
+
+                          </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <!-- featured card 3 -->
+
+            </td>  
+        </tr>
+        </tbody>
+      </table>
+  </td> 
+</tr>                                                   
+<!-- END OF TOP COLLECTIONS PAST WEEK -->
+
+
+<!---- WHITE SPACE -->
+<tr>
+  <td>
+    <table>
+      <tbody>
+        <tr>
+          <td width="80px" height="30px">&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- WHITE SPACE -->
+
+
+<!-- START OF UPCOMING EVENTS -->
+<tr>
+  <td style="padding-left: 73px; padding-bottom: 8px;">
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <p class="article-heading" style=" padding: 10px 0 10px 0; margin-bottom: 10px; font-size: 15px; font-weight: bold; text-align: center; align-items: center; font-family: 'Press Start 2P', serif; color: #302f2f; text-transform: uppercase;">Upcoming Events</p>
+            <td width="10px"></td>
+            <td>
+              <img class="article-heading-icon" src="https://i.ibb.co/8YmLNhN/icons8-pixel-arrow-50.png" alt="icons8-pixel-arrow-50" width="23px" height="22px" style="transform: rotate(-45deg) ; align-items: center; vertical-align: center;" border="0">
+            </td>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- END OF UPCOMING EVENTS -->
+
+
+
+<!-- START OF UPCOMING EVENTS IMAGE -->
+<tr>
+  <td align="center" >
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+      <tbody>
+        <tr>
+          <td class="" style="align-items: center; text-align: center;" >
+            <a href="#">
+              <img src="https://i.ibb.co/7y2dTH6/upcoming-1.jpg" alt="upcoming-1" border="0" width="460px" height="250px" style="border-radius: 10px;  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; "/>
+           </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- END OF UPCOMING EVENTS IMAGE-->
+
+
+
+<!-- START OF UPCOMING EVENT #1 -->
+<tr>
+  <td align="center" width="100%"  >
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+      <tbody>
+        <tr>
+          <td class="" style="align-items: left; text-align: center; border-radius: 5px; padding: 0px; padding-bottom: 2px; padding-top: 3px"  width="450px">  
+      
+            <a href="#" target="_blank" >
+              <p style="font-family: 'Press Start 2P'; text-align: left; align-items: left; color: black;  overflow: hidden; line-height: 27px; padding: 8px; padding-bottom: 1px; text-transform: uppercase; font-size: 14px;">NFT Paris</p>
+            </a>
+
+            <p class="article-text" style="word-wrap: break-word; font-family: 'Poppins'; align-items: left; font-size: 16px; color: rgb(63, 63, 63); letter-spacing: 0.5px; list-style: none; line-height: 1.5; padding-bottom: 10px; padding: 8px;text-align: left; line-height: 1.6; "> NFT Paris will feature speakers from top Web3 companies and offer attendees the chance to learn from industry experts and network with other leaders.
+            </p>
+
+          </td>       
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- END OF UPCOMING EVENT #1 -->
+
+
+<!-- START OF DATE AND ICON -->
+<tr>
+  <td align="center" width="100%"  >
+    <table align="left" border="0" cellpadding="0" cellspacing="0" role="presentation">
+      <tbody>
+        <tr>
+          <td width="100%" style="padding-left: 73px;">
+            <table style="align-items: center; ">
+              <tbody>
+                <tr>
+                  <td  style="align-items: center; vertical-align: center; padding-bottom: 15px; padding-left: 8px;">
+                    <img class="" width="30" height="30"  style="align-items: center; vertical-align: center;" img src="https://i.ibb.co/1Ls1ZVn/calendar-icon.png" alt="calendar-icon" border="0">  
+                  </td>
+                    <td  width="13px"></td>
+                    <td>                              
+                    <p style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 11px; align-items: center; ">February 23-34</p>       
+                     </td>  
+                  </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- END OF DATE AND ICON -->
+
+<!-- START OF LOCATION AND ICON -->
+<tr>
+  <td align="center" width="100%"  >
+    <table align="left" border="0" cellpadding="0" cellspacing="0" role="presentation">
+      <tbody>
+        <tr>
+          <td style="align-items: center; vertical-align: center; padding-left: 73px;">
+            <table>
+              <tr>
+                <td style="padding-left: 2px;">
+                  <img width="40" height="40"  style="align-items: center; vertical-align: center;" src="https://i.ibb.co/B27yydK/location-icon.png" alt="location-icon" border="0" style="padding:0">
+                </td>
+                <td width="8px"></td>
+                <td>
+                 <p style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 11px; align-items: center; ">The Grand Palais, Paris</p>
+                </td>
+              </tr>
+            </table>
+          </td>  
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- END OF LOCATION AND ICON -->
+
+
+<!-- START OF HORIZONTAL LINE -->
+<tr>
+  <td align="center" width="100%" style="padding-left: 70px; padding-right: 70px">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+      <tbody>
+        <tr>
+          <td class="" style="align-items: center; text-align: center"; width="100%">  
+           
+            <!-- START OF HORIZONTAL LINE BREAK -->
+            <hr align="start" width="430px" style="border-top: #2081E2; text-align: center; margin-left: 0; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; ">
+            <!-- END OF HORIZONTAL LINE BREAK -->
+                                  
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- END OF HORIZONTAL LINE -->
+
+<!-- START OF UPCOMING EVENT #2 -->
+<tr>
+  <td align="center" width="100%"  >
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+      <tbody>
+        <tr>
+          <td class="" style="align-items: left; text-align: center; border-radius: 5px; padding: 0px; padding-bottom: 2px; padding-top: 3px"  width="450px">  
+      
+            <a href="#" target="_blank" >
+              <p style="font-size: 14px; font-family: 'Press Start 2P'; text-align: left; align-items: left; color: black;  overflow: hidden; line-height: 27px; padding: 8px; padding-bottom: 1px;">MIAMI EXPOVERSE</p>
+            </a>
+
+            <p class="article-text" style="word-wrap: break-word; font-family: 'Poppins'; align-items: left; font-size: 16px; color: rgb(63, 63, 63); letter-spacing: 0.5px; list-style: none; line-height: 1.5; padding-bottom: 10px; padding: 8px;text-align: left; line-height: 1.6; "> NFT Paris will feature speakers from top Web3 companies and offer attendees the chance to learn from industry experts and network with other leaders.
+            </p>
+
+          </td>       
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- END OF UPCOMING EVENT #2 -->
+
+<!-- START OF DATE AND ICON #2-->
+<tr>
+  <td align="center" width="100%"  >
+    <table align="left" border="0" cellpadding="0" cellspacing="0" role="presentation">
+      <tbody>
+        <tr>
+          <td width="100%" style="padding-left: 73px;">
+            <table style="align-items: center; ">
+              <tbody>
+                <tr>
+                  <td  style="align-items: center; vertical-align: center; padding-bottom: 14px; padding-left: 8px;">
+                    <img width="30" height="30"  style="align-items: center; vertical-align: center;" src="https://i.ibb.co/1Ls1ZVn/calendar-icon.png" alt="calendar-icon" border="0"  >  
+                  </td>
+                    <td width="13px"></td>
+                    <td>                              
+                    <p style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 11px; align-items: center; ">March 3-5</p>       
+                     </td>  
+                  </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- END OF DATE AND ICON EVENT #2 -->
+
+<!-- START OF LOCATION AND ICON EVENT #2 -->
+<tr>
+  <td align="center" width="100%"  >
+    <table align="left" border="0" cellpadding="0" cellspacing="0" role="presentation">
+      <tbody>
+        <tr>
+          <td style="align-items: center; vertical-align: center; padding-left: 73px;">
+            <table>
+              <tr>
+                <td style="padding-left: 2px;">
+                  <img width="40" height="40"  style="align-items: center; vertical-align: center;" src="https://i.ibb.co/B27yydK/location-icon.png" alt="location-icon" border="0" style="padding:0">
+                </td>
+                <td width="8px"></td>
+                <td>
+                 <p style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 11px; align-items: center; ">Miami Convention Centre, Miami</p>
+                </td>
+              </tr>
+            </table>
+          </td>  
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- END OF LOCATION AND ICON EVENT #2 -->
+
+<!---- WHITE SPACE -->
+<tr>
+  <td>
+    <table>
+      <tbody>
+        <tr>
+          <td width="80px" height="70px">&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- WHITE SPACE -->
+
+
+
+
+<!-- START OF LATEST ARTICLE TEXT -->
+<tr>
+  <td style="padding-left: 73px; padding-bottom: 18px;">
+    <table>
+      <tbody>
+        <tr>
+            <td>
+              <p class="article-heading" style=" margin-bottom: 10px; font-size: 15px; font-weight: bold; text-align: center; align-items: center; font-family: 'Press Start 2P', serif; color: #302f2f; ">LATEST ARTICLE</p>
+            </td>
+            <td width="10px"></td>
+            <td>
+              <img class="article-heading-icon" src="https://i.ibb.co/8YmLNhN/icons8-pixel-arrow-50.png" alt="icons8-pixel-arrow-50" width="23px" height="22px" style="transform: rotate(-45deg) ; align-items: center; vertical-align: center;" border="0">
+            </td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- END OF LATEST ARTICLE TEXT  -->
+
+
+
+<!-- START OF LATEST ARTICLES-->
+<tr>
+  <td align="center" width="92%">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" >
+      <tbody>
+        <tr>
+
+          <!-- start of featured card -->
+          <td class="" style="align-items: center; text-align: center;" width="460px">
+            <table >
+              <tbody>
+                <tr>
+                  <td class="padding"  style="box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;border-radius: 10px;  " width="460px">
+                    <a href="#">
+                      <img src="https://i.ibb.co/y5LvZZ7/article.jpg" alt="article" border="0" width="100%" height="280px" style="  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; border-top-left-radius: 10px; border-top-right-radius: 10px;"/>
+                    </a>
+                    <table>
+                      <tbody>
+                        <tr>      
+                          <td align="left" style="padding: 15px; ">
+                            <a href="#" target="_blank" >
+                              <p style="font-size: 14px;font-family: 'Press Start 2P'; align-items: left; color: black; margin-bottom: 18px; overflow: hidden;padding-bottom: 10px; line-height: 30px;">How to Create Awesome NFTs with MidJourney</p>
+                            </a>
+                          
+
+                            <p class="article-text" style="word-wrap: break-word; font-family: 'Poppins'; align-items: left; font-size: 16px; color: rgb(63, 63, 63); letter-spacing: 1.5px; list-style: none; line-height: 1.5; padding-bottom: 10px;">Non-fungible tokens (NFTs) are changing the way we think about digital art, collectibles, and other unique digital assets. The use of NFTs allows for the creation of one-of-a-kind items that can be bought, sold, and traded just like physical objects.</p>
+
+                            <p class="article-text" style="word-wrap: break-word; font-family: 'Poppins'; align-items: left; font-size: 16px; color: rgb(63, 63, 63); letter-spacing: 1.5px; list-style: none; line-height: 1.5; padding-bottom: 10px;">Midjourney is a platform that allows you to easily create, manage, and sell NFTs. With its user-friendly interface, anyone can create stunning NFTs without...</p>
+
+                            <a>
+                              <p style="word-wrap: break-word; font-family: 'Poppins'; align-items: left; font-size: 15px; color: rgb(63, 63, 63); letter-spacing: 1.5px; list-style: none; line-height: 1.3; padding-left: 2px; padding-bottom: 10px; cursor: pointer;">
+                              Read more...
+                            </p>
+                          </a>
+                        
+                            
+
+                            <!-- Details Row -->
+                            <table style="padding-bottom: 10px">
+                              <tbody>
+                                <tr>
+                                  <td align="left" width="100%" style="align-items: center;  ">
+                                      <table style="align-items: center; ">
+                                        <tbody>
+                                          <tr>
+                                            <td style="align-items: center; vertical-align: center; padding-bottom: 10px">
+                                              <table>
+                                                <tr>
+                                                  <td>
+                                                    <img width="45" height="45"  style="border-radius: 50%; align-items: center; vertical-align: center;"src="https://i.ibb.co/Q8Z8hC6/profile-icon.jpg" alt="profile-icon" border="0">
+                                                  </td>
+                                                  <td width="10px"></td>
+                                                  <td>
+                                                  <p style="font-family: 'Press Start 2P'; align-items: left; text-transform: uppercase; font-size: 9px; align-items: center; ">by William F. Guile</p>
+                                                  </td>
+                                                </tr>
+                                              </table>
+                                            </td>  
+                                        </tr>
+                                        </tbody>
+                                      </table>
+                                  
+                                      <hr align="start" width="430px" style="border-top: #2081E2; text-align: center; margin-left: 0; ">
+                                      <p style="font-family: 'Roboto'; align-items: left; font-size: 14px; font-weight: 500; color: rgb(163, 163, 163); text-transform: uppercase; display: block; letter-spacing: 1px; padding-top: 8px">February 15th, 2023
+                                      </p>
+                                  </td> 
+                                </tr>
+                              </tbody>
+                            </table>
+                             <!-- Details Row  -->
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                   <!-- end of featured card -->
+                 
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- END OF LATEST ARTICLES -->
+
+
+
+
+<!---- WHITE SPACE -->
+<tr>
+  <td>
+    <table>
+      <tbody>
+        <tr>
+          <td width="80px" height="60px">&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- WHITE SPACE -->
+
+
+
+<!-- START OF FOOTER 1ST ROW -->
+<tr>
+  <td align="center" width="460px" style="margin-top: 20px; background-color: #2081E2;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="padding-bottom: 20px; padding-top: 15px; ">
+      <tbody>
+        <tr>
+          <td class="full-width-footer full-block footer-heading " style="align-items: center; text-align: left; color: white; font-family: 'Press Start 2P'; padding-top: 20px;" width="60%">
+          8 Bits
+          </td>
+          <td class="full-width-footer full-block " style="align-items: center; text-align: center; color: white; font-family: 'Press Start 2P'; padding-top: 20px;" width="40%">
+            <table align="center">
+              <tbody>
+                <tr >
+                  <td  style="align-items: center; padding: 0; margin: 0;">
+                    <a href="https://www.facebook.com" target="_blank">
+                      <img src="https://i.ibb.co/5RqFZgh/facebook-white.png" alt="facebook-white" border="0" width="30px" height="30px" >
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank">
+                      <img src="https://i.ibb.co/q1rMNtZ/twitter-white.png" alt="twitter-white" border="0" width="30px" height="30px">
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank">
+                      <img src="https://i.ibb.co/v17RjPz/linkedin-white.png" alt="linkedin-white" border="0" width="30px" height="30px">
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank">
+                      <img src="https://i.ibb.co/rs2PVxv/youtube-white.png" alt="youtube-white" border="0" width="30px" height="30px">
+                    </a>
+                    <a href="instagram" target="_blank">
+                      <img src="https://i.ibb.co/xjKKjX5/instagram-white.png" alt="instagram-white" border="0" width="30px" height="30px">
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- END OF FOOTER 1ST ROW -->
+
+
+<!-- START OF FOOTER 2ND Row -->
+<tr>
+  <td align="center" width="460px"  style="background-color: #2081E2;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="padding-bottom: 10px; padding-top: 15px; ">
+      <tbody>
+        <tr>
+          <td class="full-block full-width-footer center-align" style="align-items: center; text-align: left; color: white; font-family: 'Press Start 2P'; font-size: 11px;padding-left: 5px; " width="60%">
+          8bits@gmail.com
+          </td>
+          <td class="full-block full-width-footer" style="align-items: center; text-align: center; color: white; font-family: 'Press Start 2P'; font-size: 10px;" width="40%" align="right">
+
+            <table align="center">
+              <tbody>
+                <tr>
+                  <td style="align-items: center; padding-right: 3px; margin: 0; font-size: 11px;">
+                    <p>
+                      <a href="">Update</a>
+                    </p>
+                  </td>
+
+                  <td width="8px"></td>
+
+                  <td style="align-items: center; padding: 0; margin: 0; padding-right: 3px; font-family: 'Roboto';">
+                    <p>
+                      <a href=""> | </a>
+                    </p>
+                   </td>
+
+                   <td width="8px"></td>
+
+                   <td style="align-items: center; padding: 0; margin: 0; padding-left: 5px; font-size: 11px;">
+                   <p>
+                     <a href="">Unsubscribe</a>
+                   </p>
+                   </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- END OF FOOTER 2ND Row -->
+
+<!-- START OF LAST ROW FOOTER -->
+
+<tr>
+  <td width="460px" style="background-color: #2081E2; ">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="padding-bottom: 20px; padding-top: 10px;">
+      <tbody>
+        <tr>
+          
+          <td class="full-width-footer full-block center-align" style="align-items: left; text-align: left; color: white; font-family: 'Press Start 2P'; font-size: 11px; padding-left: 8px" width="55%">
+          Phone +1 879 8787
+          </td>
+   
+          <td class="full-width-footer full-block" style="align-items: right; text-align: center; color: white; font-family: 'Press Start 2P'; font-size: 9px;" width="45%" align="right">
+
+            <table align="center">
+              <tbody>
+                <tr>
+                  <td style="align-items: center; padding-right: 3px; margin: 0;">
+                   <p>
+                    <a href="">FAQ</a>
+                  </p>
+                  </td>
+
+                  <td width="15px"></td>
+
+                  <td style="align-items: center; padding-right: 3px; margin: 0;">
+                    <p>
+                     <a href="#">SHOP</a>
+                   </p>
+                  </td>
+
+                  <td  width="15px"></td>
+
+                  <td style="align-items: center; padding: 0; margin: 0; padding-right: 3px">
+                  <p>
+                    <a href="">PRIVACY</a>
+                  </p>
+                  </td>
+
+                   <td  width="15px"></td>
+
+                   <td style="align-items: center; padding: 0; margin: 0; padding-right: 3px">
+                    <p>
+                      <a href="">COOKIES</a>
+                    </p>
+                    </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- END OF LAST ROW FOOTER -->
+
+
+       <!-- END OF HTML TABLE-->
+      </table>
+    </center>
+  </body>
+</html>

@@ -1,0 +1,1136 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8;" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="supported-color-scheme" content="light dark" />
+
+  <title>Shoe Maven Transactional 1</title>
+
+  <style type="text/css">
+    @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+    body {
+      margin: 0;
+      background-color: #cccccc;
+    }
+
+    table {
+      border-spacing: 0;
+    }
+
+    td {
+      padding: 0;
+    }
+
+    img {
+      border: 0;
+    }
+
+    .wrapper {
+      width: 100%;
+      table-layout: fixed;
+      background-color: #cccccc;
+      padding-bottom: 40px;
+      padding-top: 30px;
+    }
+
+    .main {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 600px;
+      background-color: #ffffff;
+      border-spacing: 0;
+      font-family: sans-serif;
+      color: #4a4a4a;
+    }
+
+    .two-columns {
+      font-size: 0;
+      text-align: center;
+      padding: 35px 0 40px;
+    }
+
+    .two-columns .column {
+      width: 100%;
+      max-width: 300px;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .two-columns .padding {
+      padding: 20px;
+    }
+
+    .two-columns .content {
+      font-size: 15px;
+      text-align: left;
+      line-height: 20px;
+      font-weight: 500;
+    }
+
+    .button {
+      background-color: #1e5e7b;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+
+    .two-columns.last {
+      padding: 0 !important;
+    }
+
+    a {
+      text-decoration: none;
+      color: #37cbbf;
+    }
+
+    @media screen and (max-width: 599.98px) {
+        .two-columns .padding {
+          padding-right: 0 !important;
+          padding-left: 0 !important;
+        }
+
+        .one-column .text {
+          align-items: left !important;
+          text-align: left !important;
+        }
+
+
+        .full-width {
+        padding-top: 4px !important;
+        padding-bottom: 4px !important;
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        height: 100% !important;
+     
+      }
+
+      .full-block {
+        display: block !important;
+        text-align: center !important; 
+       
+      }
+
+      .table-width {
+        width: 88% !important;
+      }
+      
+      .table-width-two {
+        width: 78% !important;
+      }
+
+      .none {
+        display: none !important;
+      }
+
+      img.content {
+        border: 0px !important;
+        padding-top: 10px !important;
+        width: 360px !important;
+        max-width: 360px !important;
+        margin: 0 auto !important;
+      }
+
+    
+
+ 
+
+
+      }
+
+    @media screen and (max-width: 399.98px) {
+      .two-columns .padding {
+          padding-right: 0 !important;
+          padding-left: 0 !important;
+        }
+
+        .one-column .text {
+          align-items: left !important;
+          text-align: left !important;
+        }
+
+
+        .full-width {
+        padding-top: 4px !important;
+        padding-bottom: 4px !important;
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        height: 100% !important;
+     
+      }
+
+      .full-block {
+        display: block !important;
+        text-align: center !important; 
+       
+      }
+      
+      .table-width-three {
+        width: 78% !important;
+      }
+
+      .table-width-four {
+        width: 88% !important;
+      }
+
+      .none {
+        display: none !important;
+      }
+
+      .text-size-16 {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+        font-size: 16px !important;
+      }
+
+      .text-padding {
+        padding-top: 3px !important;
+        padding-bottom: 3px !important;
+        font-size: 16px !important;
+      } 
+    
+       h2.product-name {
+        font-size: 16px !important;
+        letter-spacing: 1px !important;
+       }
+
+      img.content {
+        border: 0px !important;
+        padding-top: 10px !important;
+        width: 360px !important;
+        max-width: 360px !important;
+        margin: 0 auto !important;
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {}
+  </style>
+</head>
+
+<body>
+  <center class="wrapper" style="table-layout: fixed; padding-bottom: 40px; padding-top: 20px">
+    <!-- Main Table -->
+    <!--[if (gte mso 9 | (IE)]>
+        <table width="600" align="center" style="border-spacing:0; color: #565656;" role="presentation">  
+        <tr>
+          <td style="padding: 0;">
+      <![endif]-->
+
+    <table class="main" align="center" border="0" cellpadding="0" cellspacing="0" width="600px" border-spacing="0"
+      style="
+          color: #565656;
+          font-family: 'Lato', sans-serif, Arial, Helvetica !important;
+          background-color: #ffffff;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          max-width: 600px;
+        ">
+      <!-- START OF HEADER LOGO -->
+      <tr>
+        <td align="center" style="padding-top: 20px">
+          <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+            <tbody>
+              <tr>
+                <td align="center">
+                  <a href="#" target="_blank">
+                    <img src="https://i.ibb.co/JjSwJn1/shoe-maven-logo.png" alt="shoe-maven-logo" border="0" width="240px"
+                      style="display: block; border: none" />
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!-- END OF HEADER LOGO -->
+
+      <!-- START OF ORDER CONFIRMATION  -->
+      <tr>
+        <td align="center" style="padding: 25px 0px">
+          <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+            <tbody>
+              <tr>
+                <td align="center" bgcolor="#F5F4ED" style="
+                      color: #1b1715;
+                      font-family: Arial, Helvetica, sans-serif;
+                      font-size: 11px;
+                      font-weight: 600;
+                      line-height: 22px;
+                      text-transform: uppercase;
+                      letter-spacing: 2px;
+                      padding: 10px 0px;
+                    ">
+                  <h2>Shipping Confirmation</h2>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!-- END OF ORDER CONFIRMATION  -->
+
+      <!-- START OF ORDER IS ON THE WAY -->
+      <tr>
+        <td align="center">
+          <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation" width="100%">
+            <tbody>
+              <tr>
+                <td align="center" style="
+                      text-transform: uppercase;
+                      font-family: Arial, sans-serif, Helvetica;
+                      color: #1b1715;
+                      font-weight: bold;
+                      font-size: 16px;
+                      line-height: 1.3;
+                    ">
+                  <h1 style="margin: 0">
+                    Your order
+                    <br />
+                    is on the way!
+                  </h1>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!-- END OF ORDER IS ON THE WAY -->
+
+      <!-- START OF ORDER NUMBER-->
+      <tr>
+        <td align="center" style="padding-top: 10px">
+          <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation" width="100%">
+            <tbody>
+              <tr>
+                <td align="center" style="
+                      line-height: 22px;
+                      font-family: Arial, sans-serif, Helvetica;
+                      font-size: 15px;
+                    ">
+                  <p style="margin: 0" bgcolor="gray">
+                    Order number #12345678 has shipped!
+                    <br />
+                    See below for package tracking information.
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!--  END OF ORDER NUMBER -->
+
+      <!-- START OF TRACK ORDER BUTTON -->
+      <tr>
+        <td align="center" style="padding-top: 25px">
+          <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%" role="presentation">
+            <tbody>
+              <tr>
+                <td align="center">
+                  <a href="#" target="_blank" style="
+                        color: #ffffff;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        padding: 10px 20px;
+                        border: none;
+                        background-color: #000000;
+                        text-decoration: none;
+                        display: inline-block;
+                        cursor: pointer;
+                      ">
+                    Track Package
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!-- END OF TRACK ORDER BUTTON -->
+
+      <!-- START OF ORDER SUMMARY TITLE-->
+      <tr>
+        <td align="center" style="padding-top: 35px">
+          <table align="center" border="0" cellspacing="0" cellpadding="0" width="90%" role="presentation">
+            <tbody>
+              <tr>
+                <td align="center">
+                  <h3 style="
+                        text-transform: uppercase;
+                        font-family: Arial, sans-serif, Helvetica;
+                        color: #000000;
+                        letter-spacing: 2px;
+                        font-size: 20px;
+                        Margin: 0;
+                        padding-bottom: 5px;
+                        line-height: 22px;
+                      ">
+                    Order Summary
+                  </h3>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-top: 10px">
+                  <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation" width="100%" class="table-width-two">
+                    <tbody >
+                      <tr>
+                        <td height="2" style="background-color: #000000;">
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!-- END OF ORDER SUMMARY TITLE -->
+
+      <!-- START OF ORDER SUMMARY DETAILS -->
+      <tr>
+        <td align="center" style="padding-top: 15px">
+          <table class="responsive-table" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+            width="540px">
+            <tbody>
+              <tr>
+                <td width="260" class="full-width full-block">
+                  <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation" width="90%">
+                    <tbody>
+                      <tr>
+                        <td align="left" class="full-width full-block">
+                          <h2 style="
+                                margin: 0;
+                                color: #1b1715;
+                                font-family: Arial, sans-serif, Helvetica;
+                                font-size: 14px;
+                                font-weight: 800;
+                                line-height: 28px;
+                                text-transform: uppercase;
+                                letter-spacing: 2px;
+                              ">
+                            Shipping Address
+                          </h2>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="left" class="full-width full-block">
+                          <p style="
+                                margin: 0;
+                                color: #1b1715;
+                                font-family: Aria, sans-serif, Helvetica;
+                                font-size: 14px;
+                                line-height: 22px;
+                                text-transform: uppercase;
+                                font-weight: normal;
+                              ">
+                            Emily Kim
+                          </p>
+                          <p style="
+                                margin: 0;
+                                color: #1b1715;
+                                font-family: Aria, sans-serif, Helvetica;
+                                font-size: 14px;
+                                line-height: 24px;
+                                text-transform: uppercase;
+                                font-weight: normal;
+                              ">
+                            218 SOUTH TOWER DRIVE
+                            <br />
+                            BEVERLY HILLS CA 90211-3421
+                            <br />
+                            USA
+                          </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td class="full-width full-block" width="20" height="20">&nbsp;</td>
+                <td width="260" class="full-width full-block">
+                  <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation" width="90%">
+                    <tbody>
+                      <tr>
+                        <td align="right" class="full-width full-block">
+                          <p style="
+                                margin: 0;
+                                color: #1b1715;
+                                font-family: Aria, sans-serif, Helvetica;
+                                font-size: 14px;
+                                line-height: 24px;
+                                text-transform: uppercase;
+                                font-weight: 800;
+                                letter-spacing: 2px;
+                              ">
+                            Billing Address
+                          </p>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td align="right"  class="full-width full-block">
+                          <p style="
+                                margin: 0;
+                                color: #1b1715;
+                                font-family: Aria, sans-serif, Helvetica;
+                                font-size: 14px;
+                                line-height: 24px;
+                                text-transform: uppercase;
+                                font-weight: normal;
+                              ">
+                            Emily Kim
+                          </p>
+                          <p style="
+                                margin: 0;
+                                color: #1b1715;
+                                font-family: Aria, sans-serif, Helvetica;
+                                font-size: 14px;
+                                line-height: 22px;
+                                text-transform: uppercase;
+                                font-weight: normal;
+                              ">
+                            218 SOUTH TOWER DRIVE
+                            <br />
+                            BEVERLY HILLS CA 90211-3421
+                            <br />
+                            USA
+                          </p>
+                        </td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+
+      <!-- END OF ORDER SUMMARY DETAILS -->
+
+      <!-- START OF PAYMENT INFORMATION-->
+      <tr>
+        <td align="center" style="padding-top: 25px">
+          <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+            <tbody>
+              <tr>
+                <td align="center">
+                  <h2 style="
+                        font-size: 16px;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        font-weight: 800;
+                        font-family: Arial, sans-serif, Helvetica;
+                        line-height: 28px;
+                        color: #000000;
+                      ">
+                    Payment Method
+                  </h2>
+                  <p style="
+                        font-size: 18px;
+                        letter-spacing: 2px;
+                        font-weight: normal;
+                        font-family: Arial, sans-serif, Helvetica;
+                        line-height: 20px;
+                        color: #000000;
+                      ">
+                    Credit Card
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!-- END OF PAYMENT INFORMATION -->
+
+      <!-- START OF ORDER ITEMS TITLE -->
+      <tr>
+        <td align="center" style="padding-top: 20px">
+          <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation" width="90%">
+            <tbody>
+              <tr>
+                <td align="center" style="padding-top: 10px">
+                  <h2 style="
+                        margin: 0;
+                        text-transform: uppercase;
+                        font-family: Arial, sans-serif, Helvetica;
+                        color: #000000;
+                        letter-spacing: 2px;
+                        font-size: 22px;
+                      ">
+                    Your items
+                  </h2>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-top: 10px">
+                  <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation" width="100%" class="table-width table-width-four">
+                    <tbody >
+                      <tr>
+                        <td height="2" style="background-color: #000000;">
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!-- END OF ORDER ITEMS TITLE -->
+
+      <!-- START OF ORDER ITEMS DETAILS #1 -->
+      <tr>
+        <td align="center" style="padding-top: 10px">
+          <table align="center" role="presentation" cellpadding="0" cellspacing="0" width="540" border="0">
+            <tbody>
+              <tr>
+                <td width="220" height="90" class="full-block full-width">
+                  <table align="center" role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                    height="100%">
+                    <tbody>
+                      <tr>
+                        <td align="left" class="full-block full-width">
+                          <img class="content" src="https://i.ibb.co/VHwZ3Jy/resized-shoes-1.jpg" alt="resized-shoes-1" border="0" width="100%"
+                            height="100%" style="display: block; border: none" />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td width="20" height="20" class="full-block full-width">&nbsp;</td>
+                <td width="250" class="full-block full-width">
+                  <table align="center" role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tbody>
+                      <tr>
+                        <td align="left" class="full-block full-width">
+                          <h2 class="product-name" style="
+                                margin: 0;
+                                font-family: Arial, Helvetica, sans-serif;
+                                font-size: 14px;
+                                font-weight: bold;
+                                text-transform: uppercase;
+                                color: #000000;
+                                letter-spacing: 2px;
+                                line-height: 22px;
+                              ">
+                            Black Low Cut Puma Shoes
+                          </h2>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="left" class="full-block full-width" style="padding-top: 10px">
+                          <p class="text-padding" style="
+                          margin: 0;
+                          font-family: Arial, sans-serif, Helvetica;
+                          line-height: 25px;
+                          font-weight: normal;
+                          font-size: 14px;
+                        ">
+                      Item #: 987504
+                  </p>
+                  <p class="text-padding" style="margin: 0;
+                  font-family: Arial, sans-serif, Helvetica;
+                  line-height: 25px;
+                  font-weight: normal;
+                  font-size: 14px;">
+                      Style: 3BADP978
+                  </p>
+                  <p class="text-padding" style="margin: 0;
+                  font-family: Arial, sans-serif, Helvetica;
+                  line-height: 25px;
+                  font-weight: normal;
+                  font-size: 14px;">
+                    Color: BLACK / DARK
+                  </p>
+                    <p class="text-padding" style="margin: 0;
+                    font-family: Arial, sans-serif, Helvetica;
+                    line-height: 25px;
+                    font-weight: normal;
+                    font-size: 14px;">
+                          Quantity: 1
+                    </p>
+                      
+                    <p class="text-padding" style=" 
+                      margin: 0;
+                      font-family: Arial, sans-serif, Helvetica;
+                      line-height: 25px;
+                      font-weight: bold;
+                      font-size: 16px;">Price: $50.00
+                    </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!-- END OF ORDER ITEMS DETAILS #1 -->
+
+      <!-- START OF BORDER BREAK -->
+      <tr>
+        <td style="padding-top: 10px">
+          <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation" width="90%" class="table-width table-width-three">
+            <tbody >
+              <tr>
+                <td height="2" style="background-color: #000000;">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!-- END OF BORDER BREAK -->
+
+      <!-- START OF ORDER ITEMS DETAILS #2 -->
+      <tr>
+        <td align="center" style="padding-top: 10px">
+          <table align="center" role="presentation" cellpadding="0" cellspacing="0" width="540" border="0">
+            <tbody>
+              <tr>
+                <td width="220" height="90" class="full-block full-width">
+                  <table align="center" role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                    height="100%">
+                    <tbody>
+                      <tr>
+                        <td align="left" class="full-block full-width">
+                          <img class="content" src="https://i.ibb.co/SccLJLx/resized-shoes-2.jpg" alt="resized-shoes-2" border="0" width="100%"
+                            height="100%" style="display: block; border: none" />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+
+                <td width="20" height="20" class="full-block full-width">&nbsp;</td>
+
+                <td width="250" class="full-block full-width">
+                  <table align="center" role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tbody>
+                      <tr>
+                        <td align="left" class="full-block full-width">
+                          <h2  class="product-name" style="
+                                margin: 0;
+                                font-family: Arial, Helvetica, sans-serif;
+                                font-size: 14px;
+                                font-weight: bold;
+                                text-transform: uppercase;
+                                color: #000000;
+                                letter-spacing: 2px;
+                                line-height: 22px;
+                              ">
+                            High Cut Nike Street Wear Shoes
+                          </h2>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="left" class="full-block full-width" style="padding-top: 10px">
+                          <p class="text-padding" style="
+                          margin: 0;
+                          font-family: Arial, sans-serif, Helvetica;
+                          line-height: 25px;
+                          font-weight: normal;
+                          font-size: 14px;
+                        ">
+                            Item #: 554915
+                        </p>
+                        <p class="text-padding" style="margin: 0;
+                        font-family: Arial, sans-serif, Helvetica;
+                        line-height: 25px;
+                        font-weight: normal;
+                        font-size: 14px;">
+                          Style: 2NZEQ780
+                        </p>
+                        <p class="text-padding" style="margin: 0;
+                        font-family: Arial, sans-serif, Helvetica;
+                        line-height: 25px;
+                        font-weight: normal;
+                        font-size: 14px;">
+                          Color: LIGHT BLUE GRAY / ORANGE
+                        </p>
+                          <p class="text-padding" style="margin: 0;
+                          font-family: Arial, sans-serif, Helvetica;
+                          line-height: 25px;
+                          font-weight: normal;
+                          font-size: 14px;">
+                                Quantity: 2
+                          </p>
+                            
+                          <p class="text-padding" style=" 
+                            margin: 0;
+                            font-family: Arial, sans-serif, Helvetica;
+                            line-height: 25px;
+                            font-weight: bold;
+                            font-size: 16px;">Price: $45.00
+                          </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!-- END OF ORDER ITEMS DETAILS #2 -->
+
+      <!-- START OF BORDER BREAK -->
+      <tr>
+        <td style="padding-top: 10px">
+          <table class="table-width table-width-three" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation" width="90%">
+            <tbody >
+              <tr>
+                <td height="2" style="background-color: #000000;">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!-- END OF BORDER BREAK -->
+
+      <!-- START OF ORDER ITEMS DETAILS #3 -->
+      <tr>
+        <td align="center" style="padding-top: 10px">
+          <table align="center" role="presentation" cellpadding="0" cellspacing="0" width="540" border="0">
+            <tbody>
+              <tr>
+                <td width="220" height="90" class="full-block full-width">
+                  <table align="center" role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                    height="100%">
+                    <tbody>
+                      <tr>
+                        <td align="left" class="full-block full-width">
+                          <img class="content" src="https://i.ibb.co/5TfbFc2/resized-shoes-3.jpg" alt="resized-shoes-3" border="0" width="100%"
+                            height="100%" style="display: block; border: none" />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td width="20" height="20" class="full-block full-width">&nbsp;</td>
+                <td width="250" class="full-block full-width">
+                  <table align="center" role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tbody>
+                      <tr>
+                        <td align="left" class="full-block full-width">
+                          <h2 class="product-name" style="
+                                margin: 0;
+                                font-family: Arial, Helvetica, sans-serif;
+                                font-size: 14px;
+                                font-weight: bold;
+                                text-transform: uppercase;
+                                color: #000000;
+                                letter-spacing: 2px;
+                                line-height: 22px;
+                              ">
+                            Navy Blue Low Cut Vans Shoes
+                          </h2>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="left" class="full-block full-width" style="padding-top: 10px">
+                          <p class="text-padding" style="
+                                margin: 0;
+                                font-family: Arial, sans-serif, Helvetica;
+                                line-height: 25px;
+                                font-weight: normal;
+                                font-size: 14px;
+                              ">
+                            Item #: 084934
+                        </p>
+                        <p class="text-padding" style="margin: 0;
+                        font-family: Arial, sans-serif, Helvetica;
+                        line-height: 25px;
+                        font-weight: normal;
+                        font-size: 14px;">
+                          Style: 5KCFZ154
+                        </p>
+                        <p class="text-padding" style="margin: 0;
+                        font-family: Arial, sans-serif, Helvetica;
+                        line-height: 25px;
+                        font-weight: normal;
+                        font-size: 14px;">
+                          Color: NAVY / WHITE
+                        </p>
+                          <p class="text-padding" style="margin: 0;
+                          font-family: Arial, sans-serif, Helvetica;
+                          line-height: 25px;
+                          font-weight: normal;
+                          font-size: 14px;">
+                                Quantity: 2
+                          </p>
+                            
+                          <p class="text-padding" style=" 
+                            margin: 0;
+                            font-family: Arial, sans-serif, Helvetica;
+                            line-height: 25px;
+                            font-weight: bold;
+                            font-size: 16px;">Price: $45.00
+                          </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!-- END OF ORDER ITEMS DETAILS #3 -->
+
+      <!-- START OF BORDER BREAK -->
+      <tr>
+        <td style="padding-top: 10px">
+          <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation"  width="90%" class="table-width-three">
+            <tbody >
+              <tr>
+                <td height="2" style="background-color: #000000;">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!-- END OF BORDER BREAK -->
+
+      <!-- START OF TRANSACTION COST -->
+      <tr>
+        <td align="center" style="padding-top: 10px">
+          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0"  width="90%" class="table-width-three">
+            <tbody>
+              <tr>
+                <td align="left" width="70%">
+                  <p class="text-size-16"
+                    style="Margin: 0;font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; line-height: 22px;padding-top: 10px; padding-left:10px; color:#000000">
+                    Subtotal</p>
+                </td>
+                <td align="right" width="30%">
+                  <p class="text-size-16"
+                    style="Margin: 0;font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; line-height: 22px;padding-top: 10px; padding-right: 10px; color:#000000">
+                    $230.00</p>
+                </td>
+              </tr>
+              <tr>
+                <td align="left" width="70%">
+                  <p class="text-size-16"
+                    style="Margin: 0;font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; line-height: 22px;padding-top: 10px; padding-left:10px; color:#000000">
+                    Shipping Cost</p>
+                </td>
+                <td align="right" width="30%">
+                  <p class="text-size-16"
+                    style="Margin: 0;font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; line-height: 22px;padding-top: 10px; padding-right:10px; color:#000000">
+                    $15.00</p>
+                </td>
+              </tr>
+              <tr>
+                <td align="left" width="70%" >
+                  <p class="text-size-16"
+                    style="Margin: 0;font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; line-height: 22px;padding-top: 10px; padding-left:10px; color:#000000">
+                    Sales Tax (10%)</p>
+                </td>
+                <td align="right" width="30%">
+                  <p class="text-size-16"
+                    style="Margin: 0;font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; line-height: 22px;padding-top: 10px; padding-right:10px; color:#000000">
+                    $23.00</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!-- END OF TRANSACTION COST -->
+
+      <!-- START OF BORDER BREAK -->
+      <tr>
+        <td style="padding-top: 10px">
+          <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation" width="90%" class="table-width-three">
+            <tbody >
+              <tr>
+                <td height="2" style="background-color: #000000;">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!-- END OF BORDER BREAK -->
+
+      <!-- START OF TOTAL COST-->
+      <tr>
+        <td align="center" style="padding-top: 10px;">
+          <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" width="90%" class="table-width-three">
+            <tbody>
+              <tr>
+                <td align="left" width="70%">
+                  <p
+                    style="Margin:0; padding-top: 10px; padding-left:10px; font-size: 18px; font-weight: bold; color:#000000; font-family: Arial, sans-serif, Helvetica; text-transform: uppercase; letter-spacing: 1px;">
+                    Total
+                  </p>
+                </td>
+                <td align="right" width="30%">
+                  <p
+                    style="Margin:0; padding-top: 10px; padding-right:10px; font-size: 18px; font-weight: bold; color:#000000; font-family: Arial, sans-serif, Helvetica; text-transform: uppercase;">
+                    $268.00</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+
+      <!-- END OF TOTAL COST -->
+      
+      
+      <!-- START OF THANK YOU -->
+      <tr>
+        <td align="center" style="padding-top: 30px;">
+          <table align="center" border="0" role="presentation" width="90%" cellspacing="0" cellpadding="0" class="table-width-three">
+            <tbody>
+              <tr>
+                <td align="center">
+                  <h2
+                    style="Margin:0; padding: 20px 0px; font-family: Arial, sans-serif, Helvetica; color: #ffffff; background-color: #000000; text-transform: uppercase; line-height: 22px; font-size: 20px; letter-spacing: 2px;">
+                    Thank you for your order!</h2>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!-- END OF THANK YOU -->
+
+      <!-- START OF EMAIL SENT TO  -->
+      <tr>
+        <td align="center" style="padding-top: 20px;">
+          <table align="center" border="0" role="presentation" width="90%" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td align="center">
+                  <p
+                    style="margin: 0;font-size: 12px; line-height: 20px;font-family: Arial, Helvetica, sans-serif;font-weight: normal;">
+                    This email was sent to emilykim@hotmail.com</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!-- END OF EMAIL SENT TO -->
+
+      <!-- START OF CONTACT US  -->
+      <tr>
+        <td align="center" style="padding-top: 10px">
+          <table align="center" border="0" role="presentation" width="90%" cellspacing="0" cellpadding="0" width="90%">
+            <tbody>
+              <tr>
+                <td width="50" align="right"><a href="#" target="_blank"
+                    style="color:#000000; font-size: 12px; font-family: Arial, Helvetica, sans-serif; font-weight: normal; line-height: 20px; text-decoration: underline;">Contact
+                    Us</a></td>
+                <td width="5" height="20">&nbsp;</td>
+                <td width="50" align="left"><a href="#" target="_blank"
+                    style="color:#000000; font-size: 12px; font-family: Arial, Helvetica, sans-serif; font-weight: normal; line-height: 20px; text-decoration: underline;">Privacy
+                    Policy</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+
+      <!-- END OF CONTACT US -->
+
+      <!-- START OF SOCIAL MEDIA ICONS  -->
+      <tr>
+        <td align="center" style="padding-top: 20px; align-items: center; vertical-align: center;">
+          <table align="center" border="0" role="presentation" width="40%" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td align="center">
+                  <a href="https://www.facebook.com" target="_blank">
+                    <img src="https://i.ibb.co/K2rR5fK/black-facebook.png" alt="black-facebook"  width="25" height="25"
+                      style="display:inline-block; border: none;">
+                  </a>
+                </td>
+                <td width="10">&nbsp;</td>
+                <td align="center">
+                  <a href="https://www.instagram.com" target="_blank">
+                    <img src="https://i.ibb.co/PWvzh2B/black-instagram.png" alt="black-instagram" border="0"  
+                    width="25" height="25"
+                      style="display: inline-block; border: none;">
+                  </a>
+                </td>
+                <td width="10">&nbsp;</td>
+                <td align="center">
+                  <a href="https://www.linkedin.com" target="_blank">
+                    <img src="https://i.ibb.co/Y2mK5YK/black-linkedin.png" alt="black-linkedin" border="0"
+                    width="25" height="25"
+                      style="display:inline-block; border: none;">
+                  </a>
+                </td>
+                <td width="10">&nbsp;</td>
+                <td align="center">
+                  <a href="https://www.twitter.com" target="_blank">
+                    <img src="https://i.ibb.co/VC4myws/black-twitter.png" alt="black-twitter" border="0"
+                    width="25" height="25"
+                      style="display:inline-block; border: none; padding: 0">
+                  </a>
+                </td>
+                <td width="10">&nbsp;</td>
+                <td align="center">
+                  <a href="https://www.youtube.com" target="_blank">
+                    <img src="https://i.ibb.co/YTRRPcK/black-youtube.png" alt="black-youtube" border="0" 
+                    width="25" height="25"
+                      style="display:inline-block; border: none; padding: 0">
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!-- END OF SOCIAL MEDIA ICONS -->
+
+      <!-- START OF ADDRESS -->
+      <tr>
+        <td align="center" style="padding-top: 10px; padding-bottom: 20px;">
+          <table align="center" border="0" role="presentation" width="90%" cellspacing="0" cellpadding="0" width="100%">
+            <tbody>
+              <tr>
+                <td align="center">
+                  <p
+                    style="font-size: 12px; font-family: Arial, Helvetica, sans-serif; font-weight: normal; line-height: 20px;">
+                    Shoe Maven LLC | 1245 Pike Street | Seattle, WA 98101 | United States</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!-- END OF ADDRESS -->
+
+      <!-- END OF HTML TABLE-->
+    </table>
+  </center>
+</body>
+
+</html>
