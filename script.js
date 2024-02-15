@@ -177,3 +177,6 @@ window.onbeforeunload = () => {
     form.reset()
   }
 }
+
+
+// Visitor Counter Function
